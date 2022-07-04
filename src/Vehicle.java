@@ -1,9 +1,9 @@
 import java.util.Objects;
 
 public class Vehicle {
-    private String brand;
-    private String model;
-    private Integer year;
+    protected String brand;
+    protected String model;
+    protected Integer year;
 
     public Vehicle() {
 
@@ -39,12 +39,17 @@ public class Vehicle {
         this.year = year;
     }
 
+    public String technicalSheet(){
+        return toString() + "Este vehículo no tiene categoría asignada";
+
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Vehicle)) return false;
         Vehicle vehicle = (Vehicle) o;
-        return getBrand().equals(vehicle.getBrand()) && getModel().equals(vehicle.getModel()) && getYear().equals(vehicle.getYear());
+        return Objects.equals(getBrand(), vehicle.getBrand()) && Objects.equals(getModel(), vehicle.getModel()) && Objects.equals(getYear(), vehicle.getYear());
     }
 
     @Override
@@ -61,6 +66,7 @@ public class Vehicle {
                 '}';
     }
 }
+
 
 
 

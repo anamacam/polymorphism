@@ -3,12 +3,28 @@ import java.util.Objects;
 public class Truck extends Vehicle {
     private Integer maxLoad;
 
-    public Truck(String bread, String model, Integer year, Integer maxLoad) {
-        super(bread, model, year);
+    public Truck() {
+
+    }
+
+    public Truck(Integer maxLoad) {
         this.maxLoad = maxLoad;
     }
 
-    public Truck(String volvo, String fh, int year) {
+    public Truck(String bread, String model, Integer year, Integer maxLoad) {
+        super(bread, model, year);
+        this.maxLoad = maxLoad;
+
+    }
+    @Override
+    public String technicalSheet() {
+        String technicalSheet = toString();
+        if (maxLoad < 100){
+            technicalSheet = technicalSheet + " Para iniciar un negocio de flete, este vehículo esta bien";
+        } else {
+        technicalSheet = technicalSheet + " Tienes que usar este auto en trabajo de campo";
+    }
+        return technicalSheet;
 
     }
 
@@ -18,16 +34,6 @@ public class Truck extends Vehicle {
 
     public void setMaxLoad(Integer maxLoad) {
         this.maxLoad = maxLoad;
-    }
-
-    public String technicalSheet() {
-        String text = new String();
-
-        if (maxLoad > 100) {
-            String tex;
-            tex = "Para iniciar un negocio de flete, está muy bien este auto";
-        }
-        return ("La marca es: " + getBrand() + "El Modelo es: " + getModel() + "el año" + getYear() + text);
     }
 
     @Override
@@ -48,6 +54,10 @@ public class Truck extends Vehicle {
     public String toString() {
         return "Truck{" +
                 "maxLoad=" + maxLoad +
+                ", brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", year=" + year +
                 '}';
     }
 }
+
