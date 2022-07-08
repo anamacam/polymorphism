@@ -1,26 +1,28 @@
-import superclase.Animal;
-import superclase.Feline;
-import superclase.Gato;
-import superclase.Lion;
+import superclase.Arroz;
+import superclase.Articulo;
+import superclase.Leche;
+import superclase.Vino;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class App {
 
-    public App() {
-    }
 
     public static final void main(String[] args) {
-        Animal[] animals = new Animal[4];
-        animals[0] = new Animal(4, "Mediano", 120, "Selva", "Negro");
-        animals[1] = new Feline(6, "Grande", 50, "Gris", "Gris", false);
-        animals[2] = new Lion(10, "Grande", 200, "Selva", "amarillo", false);
-        animals[3] = new Gato(8, "Pequeño", 10, "Ciudad", "Cafe", true);
+        List<Articulo> articulos = new ArrayList<>();
+        articulos.add(new Arroz("00123",  "Doña Pepa",1000, new Date(), "Integral"));
+        articulos.add(new Leche("00124",  "Colanta",5000, new Date(), false));
+        articulos.add(new Vino("00125",  "Gato Negro",10000, new Date(), 15));
 
-        for (int i = 0; i < animals.length; i++) {
-            animals[i].comer();
-            animals[i].comunicarse();
-            animals[i].moverse();
+        for (int i = 0; i < articulos.size(); i++) {
+            System.out.println("Artículo: " +  articulos.get(i).getNombre() +
+                    " Precio Final:"  +  articulos.get(i).obtenerPrecio());
+
 
         }
+
     }
 }
 
