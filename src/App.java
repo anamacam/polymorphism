@@ -1,7 +1,4 @@
-import superclase.Arroz;
-import superclase.Articulo;
-import superclase.Leche;
-import superclase.Vino;
+import superclase.*;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -15,6 +12,8 @@ public class App {
         articulos.add(new Arroz("00123",  "Doña Pepa",1000, new Date(), "Integral"));
         articulos.add(new Leche("00124",  "Colanta",5000, new Date(), false));
         articulos.add(new Vino("00125",  "Gato Negro",10000, new Date(), 15));
+        articulos.add(new Bebida("00126","Zebenat",1200, new Date(),"Carbonatada "));
+        articulos.add(new Aceite("00127","Gurmet",22000, new Date(), "Multiuso"));
 
         for (int i = 0; i < articulos.size(); i++) {
             System.out.println("Artículo: " +  articulos.get(i).getNombre() +
