@@ -1,5 +1,5 @@
 # polymorphism
-Repositorio para realizar prácticas de poliformismo para identificar la capacidad que tienen los objetos de una clase en ofrecer respuestas distintas  e indepentdientes  en función de los parámetros.
+Repositorio para realizar prácticas de poliformismo a fin de identificar la capacidad que tienen los objetos de una clase en ofrecer respuestas distintas  e indepentdientes  en función de los parámetros.
 
 ## Diagrama UML
 
@@ -43,4 +43,15 @@ Repositorio para realizar prácticas de poliformismo para identificar la capacid
         
                     
  ```
+ 
+ ## ¿Cómo se valida la definición semántica de una herencia?
+ 
+La herencia expresa una relación “ES UN/UNA” entre la subclase y la superclase.
+Esto significa que un objeto de una subclase es también un objeto de la superclase.
+Al contrario NO es necesariamente cierto. Un objeto de la superclase no necesariamente es un objeto de la subclase.
+
+
+
+
+
 
